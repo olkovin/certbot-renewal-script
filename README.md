@@ -1,11 +1,9 @@
 The script which was created by combining ChatGPT skills and my willnes to fix anoying problem :)
 Enjoy)
 
-# Automatic SSL Certificate Creation/Renewal Script
+# Automatic SSL Certificate Creation/Renewal Script with Telegram Notifications
 
-The script was created by combining mine and ChatGPT skills and willnes to fix the anoying problem :) 
-
-This script automates the process of creating or renewing SSL certificates using the Let's Encrypt certificate authority, with DNS validation using Amazon Route53.
+This script automates the process of creating or renewing SSL certificates using the Let's Encrypt certificate authority, with DNS validation using Amazon Route53. The script also sends a message to a specified Telegram chat with the results of the certificate creation/renewal process.
 
 ## Requirements
 
@@ -15,13 +13,13 @@ This script automates the process of creating or renewing SSL certificates using
 
 ## Configuration
 
-Before running the script, you'll need to configure the following variables in the `config_k2o_cas.conf` file:
+Before running the script, you'll need to configure the following variables in the `config_crs.conf` file:
 
 - `email`: the email address to use for Let's Encrypt registration and renewal notifications
 - `telegram_bot_token`: the token of the Telegram bot that will send notifications
 - `telegram_chat_id`: the ID of the Telegram chat to which notifications will be sent
 
-You'll also need to create a file called `config_k2o_cas_domains_list.conf` in the same directory as the script, which should contain a list of the domains for which you want to create or renew SSL certificates, one domain per line.
+You'll also need to create a file called `config_crs_domains_list.conf` in the same directory as the script, which should contain a list of the domains for which you want to create or renew SSL certificates, one domain per line.
 
 Note that you'll also need to manually configure and test the AWS Route53 plugin for Certbot before running this script. You can find more information on how to do this in the Certbot documentation.
 
